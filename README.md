@@ -61,9 +61,9 @@ const Info = () =>{
 ```
 보기와 같이 작성했을 경우 아래와 같이 보입니다.
 
-![example](./img/useEffect_test_2.png)  
+![example](./img/useEffect_test_2.PNG)  
 그리고 콘솔에는 다음과 같이 출력됩니다.
-![example](./img/useEffect_test_2-2.png)
+![example](./img/useEffect_test_2-2.PNG)
 
 ```useEffect``` 는 기본적으로 랜더링 직후 실행이 됩니다. 여기에 추가를 할 수 있는 부분은 **cleanup** 함수가 있습니다.   
 **cleanup** 함수는 만약 컴포넌트가 언마운트되기 전이나, 업데이트 되기 직전에 어떠한 작업을 수행하고 싶을때 사용할 수 있습니다. 간단한 예시를 보겠습니다
@@ -106,13 +106,13 @@ const Info = () =>{
   ```
 
   실행결과는 다음과 같습니다.  
-  ![example](./img/useEffect_test_3.png)  
+  ![example](./img/useEffect_test_3.PNG)  
   
   보이기와 숨기기를 각각 눌러보면 **console**에 아래와 같이 출력이 됩니다.  
-  ![example](./img/useEffect_test_3-1.png)  
+  ![example](./img/useEffect_test_3-1.PNG)  
 
-  아까와 같이 아이디란에 글자를 입력하게 되면 아래와 같이 출력됩니다.
-  ![example](./img/useEffect_test_3-3.png)  
+  아까와 같이 아이디란에 글자를 입력하게 되면 아래와 같이 출력됩니다.  
+  ![example](./img/useEffect_test_3-3.PNG)  
 
   만약 오직 언마운트 될 때만 뒷정리 함수를 호출하고 싶다면 ```useEffect``` 함수의 두번째 파라미터에 비어있는 배열을 넣으면 됩니다.
 
@@ -129,5 +129,3 @@ const Info = () =>{
   ```
 
   ## 3. useContext
-
-  
