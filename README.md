@@ -132,15 +132,15 @@ const Info = () =>{
 
   이 **Hook**을 사용하면 컴포넌트에서 Context를 보다 더 쉽게 사용 할 수 있습니다.
 
-  Context 객체(```React.createContext```에서 반환된 값)을 받아 그 context의 현재 값을 반환합니다. context의 현재 값은 트리 안에서 이 Hook을 호출하는 컴포넌트에 가장 가까이에 있는 ```<MyContext.Provider>```의 ```value``` prop에 의해 결정됩니다.
+  Context 객체(```React.createContext```에서 반환된 값)을 받아 그 context의 현재 값을 반환합니다. context의 현재 값은 트리 안에서 이 Hook을 호출하는 컴포넌트에 가장 가까이에 있는 ```<MyContext.Provider>```의 **value prop**에 의해 결정됩니다.
 
  ### 주의할 점  
  ```useContext```로 전달한 인자는 ```context``` 객체 그 자체이어야 합니다.
 
  >예제
- - 맞는 사용 : useContext(MyContext)
- - 틀린 사용 : useContext(MyContext.Provider)
- - 틀린 사용 : useContext(MyContext.Consumer)
+ - 맞는 사용 : ```useContext(MyContext)```
+ - 틀린 사용 : ```useContext(MyContext.Provider)```
+ - 틀린 사용 : ```useContext(MyContext.Consumer)```
 
 
 ## 4. useReducer  
@@ -275,4 +275,51 @@ const App = () => {
 export default App;
 ```
 
-## 5. useMemo
+## 5. useMemo  
+useMemo를 사용하여 함수형 컴포넌트 내부에서 발생하는 연산을 최적화 할 수 있습니다.
+
+src 디렉토리에 Average.js 파일을 생성합니다.
+
+### Average.js
+```js
+import React, { useState } from 'react';
+
+const getAverage = number => {
+    console.log('평균값 계산중...');
+    if (numbers.length === 0 ) return 0;
+    const sum = numbers.reduce((a,b)=> a+b);
+    return sum/ numbers.length;
+};
+
+const Average = () => {
+    const[list, setList] = useState([]);
+    const[number, setNumber] = useState([]);
+
+    const onChange = e => {
+        setNumber(e.target.value);
+    };
+    const onInsert = e => {
+        const nextList = list.concat(parseInt(number));
+        setList(nextList);
+        setNumber('');
+    };
+    return(
+        <div>
+            <input value = {number} onChange={onChange} />
+            <button onClick={onInsert}>등록</button>
+            <ul>
+                {list.map((value, index) => (
+                    <li key={index}>{value}</li>
+                ))}
+            </ul>
+            <div>
+                <b>평균 값:</b> {getAverage(list)}
+            </div>
+        </div>
+    );
+};
+
+export default Average;
+```
+
+그 다음엔, App에서 이 컴포넌트를 렌더링하세요.
