@@ -27,7 +27,7 @@ SQL의 생김새 자체는 엑셀 문서와 똑같습니다. 데이터베이스�
 ```sql
 SELECT email FROM friends;
 ```  
-커맨드를 보면 바로 알아볼 수 있듯이 전부 영어로 표현이 되있습니다. 그러면 이번엔 학년이 5학년보다 작은 친구의 주소만 불러와 보겠습니다.  
+커맨드를 보면 바로 알아볼 수 있듯이 전부 영어로 표현이 되있습니다. 그러면 이번엔 학년이 5학년보다 작은 친구의 주소만 불러와 보겠습니다.   
 ![table_example](./img/row_2.PNG)  
 ```sql
 SELECT email FROM friends WHERE grade < 5;
@@ -35,7 +35,7 @@ SELECT email FROM friends WHERE grade < 5;
 이 커맨드도 똑같이 영어와 거의 유사한 표현방식을 가져서 읽는데 크게 불편한 점이 없습니다. 
 
 
-지우는 개념도 영어를 이용해 매우 간단합니다. value 2번 값에 있는 것을 지워보겠습니다.
+지우는 개념도 영어를 이용해 매우 간단합니다. value 2번 값에 있는 것을 지워보겠습니다.  
 ![table_example](./img/row_3.PNG)  
 ```sql
 DELETE FROM friends WHERE id = 2;
