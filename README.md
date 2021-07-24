@@ -10,11 +10,11 @@ SQL = Structured Query Language
 **데이터 베이스**와 대화하기 위해 특별히 디자인된 언어 입니다.
 
 SQL은 크게 두가지로 나눌 수 있습니다.  
-1. Relational (SQL)
-2. Non Relational (NON-SQL)  
+1. **Relational (SQL)**
+2. **Non Relational (NON-SQL)**  
 
-SQL의 예시로는 Mysql, Postgresql, Sqlite가 있습니다.  
-NON-SQL의 예시로는 MongoDB, DynamoDB, CouchDB가 있습니다. 
+SQL의 예시로는 **Mysql, Postgresql, Sqlite**가 있습니다.  
+NON-SQL의 예시로는 **MongoDB, DynamoDB, CouchDB**가 있습니다. 
 
 SQL의 경우 많은 회사들이 널리 쓰고 있습니다. 주로 회사, 정부기관, 은행 등등 다수 기관들이 SQL을 사용하고 있습니다. 그렇기 때문에 SQL이 **업계 표준**이 된것입니다. 
 
@@ -28,7 +28,7 @@ SQL의 생김새 자체는 엑셀 문서와 똑같습니다. 데이터베이스�
 SELECT email FROM friends;
 ```  
 커맨드를 보면 바로 알아볼 수 있듯이 전부 영어로 표현이 되있습니다. 그러면 이번엔 학년이 5학년보다 작은 친구의 주소만 불러와 보겠습니다.  
-![table_example](./img/row_2.PNG)
+![table_example](./img/row_2.PNG)  
 ```sql
 SELECT email FROM friends WHERE grade < 5;
 ```  
@@ -36,7 +36,7 @@ SELECT email FROM friends WHERE grade < 5;
 
 
 지우는 개념도 영어를 이용해 매우 간단합니다. value 2번 값에 있는 것을 지워보겠습니다.
-![table_example](./img/row_3.PNG)
+![table_example](./img/row_3.PNG)  
 ```sql
 DELETE FROM friends WHERE id = 2;
 ```
